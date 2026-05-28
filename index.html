@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WOOP Car Rent</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #111827;
+    }
+
+    .hero-gradient {
+      background: linear-gradient(135deg, #f8fbff 0%, #eef5ff 100%);
+    }
+
+    .car-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 35px rgba(0,0,0,0.08);
+    }
+
+    .transition-all-custom {
+      transition: all .3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="w-full border-b border-gray-100 bg-white sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      
+      <div class="text-3xl font-extrabold tracking-tight">
+        WOOP
+      </div>
+
+      <nav class="hidden md:flex items-center gap-10 text-sm font-medium">
+        <a href="#" class="hover:text-blue-600 transition">Онлайн-бронирование</a>
+        <a href="#" class="hover:text-blue-600 transition">Услуги</a>
+        <a href="#" class="hover:text-blue-600 transition">Автопарк</a>
+        <a href="#" class="hover:text-blue-600 transition">Контакты</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <button class="hidden md:block text-sm font-medium hover:text-blue-600">
+          Регистрация
+        </button>
+
+        <button class="bg-blue-600 text-white px-5 py-2.5 rounded-xl text-sm font-semibold hover:bg-blue-700 transition">
+          Войти
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-gradient overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 py-20 lg:py-28 grid lg:grid-cols-2 gap-16 items-center">
+
+      <div>
+        <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight mb-8">
+          Легкость<br>
+          в поиске, бронировании и аренде автомобиля!
+        </h1>
+
+        <p class="text-gray-600 text-lg leading-relaxed mb-10 max-w-xl">
+          Приобретайте автомобиль в любом месте и в любое время,
+          когда вам это нужно, с помощью вашего устройства IOS или Android.
+        </p>
+
+        <button class="bg-blue-600 hover:bg-blue-700 transition text-white px-8 py-4 rounded-2xl text-lg font-semibold shadow-lg">
+          Бронируйте прямо сейчас
+        </button>
+      </div>
+
+      <div class="relative">
+        <img
+          src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop"
+          class="rounded-3xl shadow-2xl"
+        />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="-mt-10 relative z-10">
+    <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-2xl p-8 grid md:grid-cols-3 lg:grid-cols-6 gap-5">
+
+      <input class="border rounded-xl px-4 py-4 outline-none focus:ring-2 focus:ring-blue-500" placeholder="Местоположение">
+
+      <input type="date" class="border rounded-xl px-4 py-4 outline-none focus:ring-2 focus:ring-blue-500">
+
+      <input type="date" class="border rounded-xl px-4 py-4 outline-none focus:ring-2 focus:ring-blue-500">
+
+      <select class="border rounded-xl px-4 py-4 outline-none focus:ring-2 focus:ring-blue-500">
+        <option>Тип автомобиля</option>
+        <option>SUV</option>
+        <option>Sedan</option>
+      </select>
+
+      <input type="time" class="border rounded-xl px-4 py-4 outline-none focus:ring-2 focus:ring-blue-500">
+
+      <button class="bg-blue-600 hover:bg-blue-700 transition text-white rounded-xl font-semibold">
+        Забронировать
+      </button>
+
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="py-28">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-20">
+        <h2 class="text-4xl font-extrabold mb-5">
+          Мы предлагаем лучшие предложения
+        </h2>
+
+        <p class="text-gray-500 text-lg">
+          по аренде автомобилей
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div class="bg-white rounded-3xl p-8 shadow-lg">
+          <div class="text-5xl mb-6">💰</div>
+          <h3 class="text-xl font-bold mb-4">
+            Лучшая цена гарантирована
+          </h3>
+          <p class="text-gray-600">
+            Найдете более низкую цену? Мы вернем вам 100% разницы.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 shadow-lg">
+          <div class="text-5xl mb-6">🧑‍✈️</div>
+          <h3 class="text-xl font-bold mb-4">
+            Опытный водитель
+          </h3>
+          <p class="text-gray-600">
+            У нас есть множество опытных водителей для вас.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 shadow-lg">
+          <div class="text-5xl mb-6">🚗</div>
+          <h3 class="text-xl font-bold mb-4">
+            24-часовая доставка
+          </h3>
+          <p class="text-gray-600">
+            Закажите автомобиль в любое время, и мы доставим его вам.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 shadow-lg">
+          <div class="text-5xl mb-6">🛠️</div>
+          <h3 class="text-xl font-bold mb-4">
+            Техническая поддержка
+          </h3>
+          <p class="text-gray-600">
+            Наша поддержка доступна круглосуточно.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CARS -->
+  <section class="bg-gray-50 py-28">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="flex items-center justify-between mb-16">
+        <div>
+          <h2 class="text-4xl font-extrabold mb-3">
+            Наш Автопарк
+          </h2>
+
+          <p class="text-gray-500">
+            Найдите подходящий для вас автомобиль
+          </p>
+        </div>
+
+        <button class="hidden md:block border px-6 py-3 rounded-xl font-medium hover:bg-black hover:text-white transition">
+          Показать все
+        </button>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- CARD -->
+        <div class="car-card transition-all-custom bg-white rounded-3xl overflow-hidden shadow-lg">
+          <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=1200&auto=format&fit=crop" class="h-52 w-full object-cover">
+
+          <div class="p-6">
+            <div class="text-sm text-blue-600 font-bold mb-2">NEW</div>
+
+            <h3 class="text-xl font-bold mb-3">
+              Skoda Octavia III
+            </h3>
+
+            <div class="text-gray-500 text-sm mb-5">
+              ⭐ 4.8 (2436 отзывов)
+            </div>
+
+            <div class="flex justify-between text-sm text-gray-600 mb-6">
+              <span>5 пассажиров</span>
+              <span>Автомат</span>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div>
+                <div class="text-sm text-gray-500">
+                  Стоимость
+                </div>
+
+                <div class="text-2xl font-extrabold">
+                  4 465 ₽
+                </div>
+              </div>
+
+              <button class="bg-blue-600 hover:bg-blue-700 transition text-white px-5 py-3 rounded-xl font-semibold">
+                Арендовать
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="car-card transition-all-custom bg-white rounded-3xl overflow-hidden shadow-lg">
+          <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?q=80&w=1200&auto=format&fit=crop" class="h-52 w-full object-cover">
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3">
+              BMW 218 M Sport
+            </h3>
+
+            <div class="text-gray-500 text-sm mb-5">
+              ⭐ 4.9 (1554 отзывов)
+            </div>
+
+            <div class="flex justify-between text-sm text-gray-600 mb-6">
+              <span>5 пассажиров</span>
+              <span>140 л.с</span>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div>
+                <div class="text-sm text-gray-500">
+                  Стоимость
+                </div>
+
+                <div class="text-2xl font-extrabold">
+                  7 315 ₽
+                </div>
+              </div>
+
+              <button class="bg-blue-600 hover:bg-blue-700 transition text-white px-5 py-3 rounded-xl font-semibold">
+                Арендовать
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="car-card transition-all-custom bg-white rounded-3xl overflow-hidden shadow-lg">
+          <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=1200&auto=format&fit=crop" class="h-52 w-full object-cover">
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3">
+              Geely Preface
+            </h3>
+
+            <div class="text-gray-500 text-sm mb-5">
+              ⭐ 4.8 (2436 отзывов)
+            </div>
+
+            <div class="flex justify-between text-sm text-gray-600 mb-6">
+              <span>Автомат</span>
+              <span>200 л.с</span>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div>
+                <div class="text-sm text-gray-500">
+                  Стоимость
+                </div>
+
+                <div class="text-2xl font-extrabold">
+                  7 040 ₽
+                </div>
+              </div>
+
+              <button class="bg-blue-600 hover:bg-blue-700 transition text-white px-5 py-3 rounded-xl font-semibold">
+                Арендовать
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD -->
+        <div class="car-card transition-all-custom bg-white rounded-3xl overflow-hidden shadow-lg">
+          <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?q=80&w=1200&auto=format&fit=crop" class="h-52 w-full object-cover">
+
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-3">
+              GAC Trumpchi M8
+            </h3>
+
+            <div class="text-gray-500 text-sm mb-5">
+              ⭐ 4.8 (2436 отзывов)
+            </div>
+
+            <div class="flex justify-between text-sm text-gray-600 mb-6">
+              <span>7 пассажиров</span>
+              <span>252 л.с</span>
+            </div>
+
+            <div class="flex justify-between items-center">
+              <div>
+                <div class="text-sm text-gray-500">
+                  Стоимость
+                </div>
+
+                <div class="text-2xl font-extrabold">
+                  11 305 ₽
+                </div>
+              </div>
+
+              <button class="bg-blue-600 hover:bg-blue-700 transition text-white px-5 py-3 rounded-xl font-semibold">
+                Арендовать
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="py-28">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-20">
+        <h2 class="text-4xl font-extrabold mb-5">
+          Отзывы наших клиентов
+        </h2>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+
+        <div class="bg-white shadow-xl rounded-3xl p-8">
+          <div class="text-yellow-500 text-xl mb-4">
+            ⭐⭐⭐⭐⭐
+          </div>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Я пользуюсь вашими услугами уже 3 года.
+            У вас отличный сервис.
+          </p>
+
+          <div class="font-bold">
+            Анна Фролова
+          </div>
+        </div>
+
+        <div class="bg-white shadow-xl rounded-3xl p-8">
+          <div class="text-yellow-500 text-xl mb-4">
+            ⭐⭐⭐⭐⭐
+          </div>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Ваша команда всегда работает вовремя и очень профессионально.
+          </p>
+
+          <div class="font-bold">
+            Роман Иванов
+          </div>
+        </div>
+
+        <div class="bg-white shadow-xl rounded-3xl p-8">
+          <div class="text-yellow-500 text-xl mb-4">
+            ⭐⭐⭐⭐⭐
+          </div>
+
+          <p class="text-gray-600 leading-relaxed mb-6">
+            I feel very secure when using WOOP services.
+          </p>
+
+          <div class="font-bold">
+            Charlie Johnson
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- APP -->
+  <section class="bg-blue-600 py-24 text-white">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+
+      <div>
+        <h2 class="text-5xl font-extrabold mb-8">
+          Скачайте приложение бесплатно
+        </h2>
+
+        <p class="text-xl text-blue-100 mb-10">
+          10% скидка на первый заказ через приложение.
+        </p>
+
+        <div class="flex gap-5">
+          <button class="bg-white text-black px-8 py-4 rounded-2xl font-bold">
+            App Store
+          </button>
+
+          <button class="bg-black text-white px-8 py-4 rounded-2xl font-bold">
+            Google Play
+          </button>
+        </div>
+      </div>
+
+      <img
+        src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1200&auto=format&fit=crop"
+        class="rounded-3xl shadow-2xl"
+      />
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-white py-20">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+
+      <div>
+        <div class="text-3xl font-extrabold mb-6">
+          WOOP
+        </div>
+
+        <p class="text-gray-400 leading-relaxed">
+          Аренда автомобилей нового поколения.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-lg mb-5">
+          Информация
+        </h4>
+
+        <div class="space-y-3 text-gray-400">
+          <div>О нас</div>
+          <div>Условия аренды</div>
+          <div>Автопарк</div>
+          <div>Отзывы</div>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-lg mb-5">
+          Помощь
+        </h4>
+
+        <div class="space-y-3 text-gray-400">
+          <div>FAQ</div>
+          <div>Страховка</div>
+          <div>Платежи</div>
+          <div>ГИБДД</div>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-lg mb-5">
+          Контакты
+        </h4>
+
+        <div class="space-y-3 text-gray-400">
+          <div>+7 (915) 769-17-65</div>
+          <div>woopcars@gmail.com</div>
+          <div>Таганская ул., 20, Москва</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center text-gray-500 mt-16 text-sm">
+      Copyright 2025 · Rentcars, All Rights Reserved
+    </div>
+  </footer>
+
+</body>
+</html>
